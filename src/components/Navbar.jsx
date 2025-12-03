@@ -38,7 +38,7 @@ export default function Navbar() {
                     <BookOpen size={20} className="md:w-6 md:h-6" />
                 </div>
                 <span className="text-lg md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                    Project_2
+                    Reader
                 </span>
             </div>
 

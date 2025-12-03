@@ -52,11 +52,24 @@ export default function CenterPanel() {
                                 // If it's a heading, scroll to it after render (simple timeout for now)
                                 if (currentChapter.type === 'heading') {
                                     setTimeout(() => {
-                                        const element = document.getElementById(currentChapter.title); // We used title as ID or similar?
-                                        // In convert_chapters.py we didn't set IDs for headings explicitly to match titles exactly, 
-                                        // but we can try.
-                                        if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                        const elementId = currentChapter.id;
+                                        const element = document.getElementById(elementId);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        }
                                     }, 500);
+                                } else if (currentChapter.type === 'quiz') {
+                                    // For quiz, wait longer for TestArea component to render
+                                    setTimeout(() => {
+                                        const elementId = currentChapter.id;
+                                        const element = document.getElementById(elementId);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                        } else {
+                                            // Fallback: scroll to bottom if element not found
+                                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                                        }
+                                    }, 1000);
                                 }
                             } else {
                                 console.error("Failed to fetch:", path, res.status);

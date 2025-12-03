@@ -8,89 +8,64 @@
     "children": [
       {
         "id": "chapter-9-convolution-and-binaural-sound-synthesis-0",
-        "title": "Chapter 9 Convolution and Binaural Sound Synthesis",
+        "title": "Chapter 9 Convolution and\n        Binaural Sound Synthesis",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-1-introduction-0",
-        "title": "9.1 Introduction",
+        "id": "9.1-introduction",
+        "title": "9.1\n        Introduction",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-2-discrete-convolution-1",
+        "id": "9.2-discrete-convolution",
+        "title": "9.2\n        Discrete Convolution",
+        "type": "heading",
+        "source": "local",
+        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
+      },
+      {
+        "id": "9.2-discrete-convolution-137",
         "title": "9.2 Discrete Convolution",
         "type": "heading",
-        "page": 1,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-2-discrete-convolution-137-2",
-        "title": "9.2 Discrete Convolution 137",
+        "id": "9.3-fft-convolution",
+        "title": "9.3 FFT\n        Convolution",
         "type": "heading",
-        "page": 2,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-3-fft-convolution-3",
-        "title": "9.3 FFT Convolution",
+        "id": "9.4-binaural-synthesis",
+        "title": "9.4\n        Binaural Synthesis",
         "type": "heading",
-        "page": 3,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-3-fft-convolution-139-4",
-        "title": "9.3 FFT Convolution 139",
+        "id": "9.5-binaural-rendering-141",
+        "title": "9.5\n        Binaural Rendering",
         "type": "heading",
-        "page": 4,
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       },
       {
-        "id": "9-4-binaural-synthesis-5",
-        "title": "9.4 Binaural Synthesis",
-        "type": "heading",
-        "page": 5,
-        "source": "local",
-        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
-      },
-      {
-        "id": "9-5-binaural-rendering-141-6",
-        "title": "9.5 Binaural Rendering 141",
-        "type": "heading",
-        "page": 6,
-        "source": "local",
-        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
-      },
-      {
-        "id": "9-5-binaural-rendering-6",
-        "title": "9.5 Binaural Rendering",
-        "type": "heading",
-        "page": 6,
-        "source": "local",
-        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
-      },
-      {
-        "id": "9-6-spatial-resolution-of-hrtf-143-8",
-        "title": "9.6 Spatial Resolution of HRTF 143",
-        "type": "heading",
-        "page": 8,
-        "source": "local",
-        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
-      },
-      {
-        "id": "9-6-spatial-resolution-of-hrtf-8",
+        "id": "9.6-spatial-resolution-of-hrtf-143",
         "title": "9.6 Spatial Resolution of HRTF",
         "type": "heading",
-        "page": 8,
+        "source": "local",
+        "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
+      },
+      {
+        "id": "quiz-09_convolution_and_binaural_sound_synthesis",
+        "title": "Test Your Knowledge",
+        "type": "quiz",
         "source": "local",
         "contentPath": "/content/09_convolution_and_binaural_sound_synthesis.html"
       }
@@ -107,135 +82,48 @@
         "id": "chapter-10-simulation-methods-0",
         "title": "Chapter 10 Simulation Methods",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-1-introduction-0",
-        "title": "10.1 Introduction",
+        "id": "10.1-introduction",
+        "title": "10.1\n        Introduction",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-0",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields",
+        "id": "10.2-simulation-methods-for-sound-and-vibration-fields",
+        "title": "10.2 Simulation Methods for Sound and\n        Vibration Fields",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-147-2",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 147",
+        "id": "10.3-two-port-models",
+        "title": "10.3\n        Two-Port Models",
         "type": "heading",
-        "page": 2,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-149-4",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 149",
+        "id": "10.4-other-models-169",
+        "title": "10.4\n        Other Models",
         "type": "heading",
-        "page": 4,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-151-6",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 151",
+        "id": "10.4-other-models",
+        "title": "10.4 Other\n        Models",
         "type": "heading",
-        "page": 6,
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       },
       {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-153-8",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 153",
-        "type": "heading",
-        "page": 8,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-155-10",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 155",
-        "type": "heading",
-        "page": 10,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-157-12",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 157",
-        "type": "heading",
-        "page": 12,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-159-14",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 159",
-        "type": "heading",
-        "page": 14,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-161-16",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 161",
-        "type": "heading",
-        "page": 16,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-2-simulation-methods-for-sound-and-vibration-fields-163-18",
-        "title": "10.2 Simulation Methods for Sound and Vibration Fields 163",
-        "type": "heading",
-        "page": 18,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-3-two-port-models-19",
-        "title": "10.3 Two-Port Models",
-        "type": "heading",
-        "page": 19,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-3-two-port-models-165-20",
-        "title": "10.3 Two-Port Models 165",
-        "type": "heading",
-        "page": 20,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-3-two-port-models-167-22",
-        "title": "10.3 Two-Port Models 167",
-        "type": "heading",
-        "page": 22,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-4-other-models-169-24",
-        "title": "10.4 Other Models 169",
-        "type": "heading",
-        "page": 24,
-        "source": "local",
-        "contentPath": "/content/10_simulation_methods.html"
-      },
-      {
-        "id": "10-4-other-models-24",
-        "title": "10.4 Other Models",
-        "type": "heading",
-        "page": 24,
+        "id": "quiz-10_simulation_methods",
+        "title": "Test Your Knowledge",
+        "type": "quiz",
         "source": "local",
         "contentPath": "/content/10_simulation_methods.html"
       }
@@ -249,290 +137,233 @@
     "contentPath": "/content/11_simulation_of_sound_in_rooms.html",
     "children": [
       {
-        "id": "chapter-11-simulation-of-sound-in-rooms-0",
-        "title": "Chapter 11 Simulation of Sound in Rooms",
+        "id": "chapter-11",
+        "title": "Chapter 11\n        Simulation of Sound in Rooms",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-1-introduction-0",
-        "title": "11.1 Introduction",
+        "id": "11.1-introduction",
+        "title": "11.1\n        Introduction",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-2-general-0",
+        "id": "11.2-general",
         "title": "11.2 General",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-2-general-173-2",
-        "title": "11.2 General 173",
+        "id": "11.2.1-cad-room-model",
+        "title": "11.2.1 CAD\n        Room Model",
         "type": "heading",
-        "page": 2,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-2-general-175-4",
-        "title": "11.2 General 175",
+        "id": "11.2-general-175",
+        "title": "11.2\n                General",
         "type": "heading",
-        "page": 4,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-177-6",
-        "title": "11.3 Stochastic Ray Tracing 177",
+        "id": "11.2.2-absorption-coef-fi-cients",
+        "title": "11.2.2 Absorption Coef fi\n                cients",
         "type": "heading",
-        "page": 6,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-6",
+        "id": "11.2.3-scattering-coef-fi-cients",
+        "title": "11.2.3 Scattering Coef fi\n                cients",
+        "type": "heading",
+        "source": "local",
+        "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
+      },
+      {
+        "id": "11.3-stochastic-ray-tracing-177",
         "title": "11.3 Stochastic Ray Tracing",
         "type": "heading",
-        "page": 6,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-179-8",
-        "title": "11.3 Stochastic Ray Tracing 179",
+        "id": "11.3.1-point-in-polygon-test",
+        "title": "11.3.1\n                                Point-in-Polygon Test",
         "type": "heading",
-        "page": 8,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-181-10",
-        "title": "11.3 Stochastic Ray Tracing 181",
+        "id": "11.3.2-re-fl-ection",
+        "title": "11.3.2 Re fl\n                                ection",
         "type": "heading",
-        "page": 10,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-183-12",
-        "title": "11.3 Stochastic Ray Tracing 183",
+        "id": "11.3-stochastic-ray-tracing-181",
+        "title": "11.3\n                                Stochastic Ray Tracing",
         "type": "heading",
-        "page": 12,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-185-14",
-        "title": "11.3 Stochastic Ray Tracing 185",
+        "id": "11.3.3-detectors",
+        "title": "11.3.3\n                                Detectors",
         "type": "heading",
-        "page": 14,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-187-16",
-        "title": "11.3 Stochastic Ray Tracing 187",
+        "id": "11.3.4-linking-scattering-and-detectors:--\u201c-diffuse-rain-\u201d",
+        "title": "11.3.4 Linking\n                                Scattering and Detectors: \u201c Diffuse Rain \u201d",
         "type": "heading",
-        "page": 16,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-189-18",
-        "title": "11.3 Stochastic Ray Tracing 189",
+        "id": "11.3.5-presentation-of-results",
+        "title": "11.3.5\n                                Presentation of Results",
         "type": "heading",
-        "page": 18,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-191-20",
-        "title": "11.3 Stochastic Ray Tracing 191",
+        "id": "11.3.6-curved-surfaces",
+        "title": "11.3.6 Curved\n                                Surfaces",
         "type": "heading",
-        "page": 20,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-3-stochastic-ray-tracing-193-22",
-        "title": "11.3 Stochastic Ray Tracing 193",
+        "id": "11.3.7-reproducibility-in-stochastic-ray-tracing",
+        "title": "11.3.7\n                                Reproducibility in Stochastic Ray Tracing",
         "type": "heading",
-        "page": 22,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-195-24",
-        "title": "11.4 Image Source Model 195",
+        "id": "11.3.8-computation-times-versus-uncertainties:-case-studies",
+        "title": "11.3.8\n                                Computation Times Versus Uncertainties: Case Studies",
         "type": "heading",
-        "page": 24,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-24",
-        "title": "11.4 Image Source Model",
+        "id": "11.4-image-source-model-195",
+        "title": "11.4 Image\n                                Source Model",
         "type": "heading",
-        "page": 24,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-197-26",
-        "title": "11.4 Image Source Model 197",
+        "id": "11.4.1-classical-model",
+        "title": "11.4.1\n                                Classical Model",
         "type": "heading",
-        "page": 26,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-199-28",
-        "title": "11.4 Image Source Model 199",
+        "id": "11.4.2-audibility-test",
+        "title": "11.4.2\n                                Audibility Test",
         "type": "heading",
-        "page": 28,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-201-30",
-        "title": "11.4 Image Source Model 201",
+        "id": "11.4.3-limitations",
+        "title": "11.4.3\n                                Limitations",
         "type": "heading",
-        "page": 30,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-4-image-source-model-203-32",
-        "title": "11.4 Image Source Model 203",
+        "id": "11.4.4-diffraction",
+        "title": "11.4.4\n                                        Diffraction",
         "type": "heading",
-        "page": 32,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-5-hybrid-image-source-models-deterministic-ray-tracing--33",
-        "title": "11.5 Hybrid Image Source Models (Deterministic Ray Tracing)",
+        "id": "11.4-image-source-model-201",
+        "title": "11.4\n                                        Image Source Model",
         "type": "heading",
-        "page": 33,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-5-hybrid-image-source-models-deterministic-ray-tracing-205-34",
-        "title": "11.5 Hybrid Image Source Models (Deterministic Ray Tracing) 205",
+        "id": "11.4.5-reduction-of-computational-load-by-preprocessing",
+        "title": "11.4.5\n                                        Reduction of Computational Load by Preprocessing",
         "type": "heading",
-        "page": 34,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-6-systematic-uncertainties-of-geometrical-acoustics-207-36",
-        "title": "11.6 Systematic Uncertainties of Geometrical Acoustics 207",
+        "id": "11.5-hybrid-image-source-models-(deterministic-ray-tracing)",
+        "title": "11.5\n                                        Hybrid Image Source Models (Deterministic Ray Tracing)",
         "type": "heading",
-        "page": 36,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-6-systematic-uncertainties-of-geometrical-acoustics-36",
-        "title": "11.6 Systematic Uncertainties of Geometrical Acoustics",
+        "id": "11.6-systematic-uncertainties-of-geometrical-acoustics-207",
+        "title": "11.6\n                                        Systematic Uncertainties of Geometrical Acoustics",
         "type": "heading",
-        "page": 36,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-6-systematic-uncertainties-of-geometrical-acoustics-209-38",
-        "title": "11.6 Systematic Uncertainties of Geometrical Acoustics 209",
+        "id": "11.7-hybrid-models-in-room-acoustics",
+        "title": "11.7\n                                        Hybrid Models in Room Acoustics",
         "type": "heading",
-        "page": 38,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-7-hybrid-models-in-room-acoustics-39",
-        "title": "11.7 Hybrid Models in Room Acoustics",
+        "id": "11.7.1-hybrid-deterministic-stochastic-models",
+        "title": "11.7.1\n                                        Hybrid Deterministic-Stochastic Models",
         "type": "heading",
-        "page": 39,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-7-hybrid-models-in-room-acoustics-211-40",
-        "title": "11.7 Hybrid Models in Room Acoustics 211",
+        "id": "11.8-hybrid-wave-and-geometrical-acoustics-models",
+        "title": "11.8\n                                        Hybrid Wave and Geometrical Acoustics Models",
         "type": "heading",
-        "page": 40,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-7-hybrid-models-in-room-acoustics-213-42",
-        "title": "11.7 Hybrid Models in Room Acoustics 213",
+        "id": "11.9-filter-construction-of-spatial-room-impulse-responses",
+        "title": "11.9\n                                        Filter Construction of Spatial Room Impulse Responses",
         "type": "heading",
-        "page": 42,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-7-hybrid-models-in-room-acoustics-215-44",
-        "title": "11.7 Hybrid Models in Room Acoustics 215",
+        "id": "11.9.1-encoding-of-spatial-room-impulse-response-filters",
+        "title": "11.9.1\n                                        Encoding of Spatial Room Impulse Response Filters",
         "type": "heading",
-        "page": 44,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-8-hybrid-wave-and-geometrical-acoustics-models-45",
-        "title": "11.8 Hybrid Wave and Geometrical Acoustics Models",
+        "id": "11.9.2-binaural-room-impulse-response-filters",
+        "title": "11.9.2\n                                        Binaural Room Impulse Response Filters",
         "type": "heading",
-        "page": 45,
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       },
       {
-        "id": "11-8-hybrid-wave-and-geometrical-acoustics-models-217-46",
-        "title": "11.8 Hybrid Wave and Geometrical Acoustics Models 217",
-        "type": "heading",
-        "page": 46,
-        "source": "local",
-        "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
-      },
-      {
-        "id": "11-9-filter-construction-of-spatial-room-impulse-responses-47",
-        "title": "11.9 Filter Construction of Spatial Room Impulse Responses",
-        "type": "heading",
-        "page": 47,
-        "source": "local",
-        "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
-      },
-      {
-        "id": "11-9-filter-construction-of-spatial-room-impulse-responses-219-48",
-        "title": "11.9 Filter Construction of Spatial Room Impulse Responses 219",
-        "type": "heading",
-        "page": 48,
-        "source": "local",
-        "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
-      },
-      {
-        "id": "11-9-filter-construction-of-spatial-room-impulse-responses-221-50",
-        "title": "11.9 Filter Construction of Spatial Room Impulse Responses 221",
-        "type": "heading",
-        "page": 50,
-        "source": "local",
-        "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
-      },
-      {
-        "id": "11-9-filter-construction-of-spatial-room-impulse-responses-223-52",
-        "title": "11.9 Filter Construction of Spatial Room Impulse Responses 223",
-        "type": "heading",
-        "page": 52,
+        "id": "quiz-11_simulation_of_sound_in_rooms",
+        "title": "Test Your Knowledge",
+        "type": "quiz",
         "source": "local",
         "contentPath": "/content/11_simulation_of_sound_in_rooms.html"
       }
@@ -547,81 +378,57 @@
     "children": [
       {
         "id": "chapter-18-acoustic-virtual-reality-systems-0",
-        "title": "Chapter 18 Acoustic Virtual Reality Systems",
+        "title": "Chapter 18 Acoustic Virtual\n        Reality Systems",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-1-introduction-0",
-        "title": "18.1 Introduction",
+        "id": "18.1-introduction",
+        "title": "18.1\n        Introduction",
         "type": "heading",
-        "page": 0,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-2-head-mounted-displays-325-2",
-        "title": "18.2 Head-Mounted Displays 325",
-        "type": "heading",
-        "page": 2,
-        "source": "local",
-        "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
-      },
-      {
-        "id": "18-2-head-mounted-displays-2",
+        "id": "18.2-head-mounted-displays-325",
         "title": "18.2 Head-Mounted Displays",
         "type": "heading",
-        "page": 2,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-3-cave-technology-3",
-        "title": "18.3 CAVE Technology",
+        "id": "18.2-head-mounted-displays",
+        "title": "18.2\n        Head-Mounted Displays",
         "type": "heading",
-        "page": 3,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-4-open-source-virtual-acoustics-software-327-4",
-        "title": "18.4 Open-Source Virtual Acoustics Software 327",
+        "id": "18.3-cave-technology",
+        "title": "18.3 CAVE\n        Technology",
         "type": "heading",
-        "page": 4,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-4-open-source-virtual-acoustics-software-4",
-        "title": "18.4 Open-Source Virtual Acoustics Software",
+        "id": "18.4-open-source-virtual-acoustics-software-327",
+        "title": "18.4 Open-Source Virtual Acoustics\n        Software",
         "type": "heading",
-        "page": 4,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-4-open-source-virtual-acoustics-software-329-6",
-        "title": "18.4 Open-Source Virtual Acoustics Software 329",
+        "id": "18.5-open-data-and-benchmarks-for-virtual-acoustics",
+        "title": "18.5 Open Data and Benchmarks for\n        Virtual Acoustics",
         "type": "heading",
-        "page": 6,
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       },
       {
-        "id": "18-5-open-data-and-benchmarks-for-virtual-acoustics-7",
-        "title": "18.5 Open Data and Benchmarks for Virtual Acoustics",
-        "type": "heading",
-        "page": 7,
-        "source": "local",
-        "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
-      },
-      {
-        "id": "18-5-open-data-and-benchmarks-for-virtual-acoustics-331-8",
-        "title": "18.5 Open Data and Benchmarks for Virtual Acoustics 331",
-        "type": "heading",
-        "page": 8,
+        "id": "quiz-18_acoustic_virtual_reality_systems",
+        "title": "Test Your Knowledge",
+        "type": "quiz",
         "source": "local",
         "contentPath": "/content/18_acoustic_virtual_reality_systems.html"
       }

@@ -15,19 +15,31 @@ export default function TestArea({ chapterId }) {
     const [score, setScore] = useState(0);
 
     useEffect(() => {
-        // Normalize chapterId to match keys in quizData
-        // The chapterId might be "09_convolution..." or just "09" depending on how it's stored.
-        // Based on file list, it seems to be the full filename without extension or similar.
-        // Let's try to find a match.
         if (!chapterId) return;
 
-        // Simple matching logic: check if any key in quizData is part of chapterId or vice versa
-        const key = Object.keys(quizData).find(k => chapterId.includes(k) || k.includes(chapterId));
+        // Helper to extract the first number from a string (e.g., "11" from "11-1-intro" or "chapter-11")
+        const getChapterNumber = (id) => {
+            const match = id.match(/(\d+)/);
+            return match ? parseInt(match[1], 10) : null;
+        };
+
+        const targetNum = getChapterNumber(chapterId);
+
+        // Find key in quizData that matches the chapter number
+        // This handles "09" vs "9" mismatches and ensures subheadings (e.g. "11.1") map to the main chapter quiz
+        let key = Object.keys(quizData).find(k => {
+            const keyNum = getChapterNumber(k);
+            return keyNum !== null && keyNum === targetNum;
+        });
+
+        // Fallback to original inclusion logic if number matching fails
+        if (!key) {
+            key = Object.keys(quizData).find(k => chapterId.includes(k) || k.includes(chapterId));
+        }
 
         if (key) {
             setQuestions(quizData[key]);
         } else {
-            // Fallback or empty if no matching quiz found
             setQuestions([]);
         }
 

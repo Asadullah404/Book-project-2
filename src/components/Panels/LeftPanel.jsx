@@ -16,8 +16,8 @@ const NavItem = ({ item, depth = 0 }) => {
         if (hasChildren) {
             setIsOpen(!isOpen);
         }
-        // If it's a chapter or heading, we might want to navigate
-        if (item.type === 'chapter' || item.type === 'heading') {
+        // If it's a chapter, heading, or quiz, navigate to it
+        if (item.type === 'chapter' || item.type === 'heading' || item.type === 'quiz') {
             setCurrentChapter(item);
         }
     };
@@ -25,6 +25,7 @@ const NavItem = ({ item, depth = 0 }) => {
     const getIcon = () => {
         if (item.type === 'category') return <Book size={16} className="text-blue-500" />;
         if (item.type === 'chapter') return <FileText size={16} className="text-purple-500" />;
+        if (item.type === 'quiz') return <FileText size={16} className="text-green-500" />; // Or a specific Quiz icon
         return <Hash size={14} className="text-gray-400" />;
     };
 
