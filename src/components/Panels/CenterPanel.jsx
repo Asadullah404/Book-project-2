@@ -114,6 +114,13 @@ export default function CenterPanel() {
         fetchChapterContent();
     }, [currentChapter]);
 
+    // Trigger MathJax to process the content after it's loaded
+    useEffect(() => {
+        if (content && typeof window !== 'undefined' && window.MathJax) {
+            window.MathJax.typesetPromise().catch((err) => console.error('MathJax typeset error:', err));
+        }
+    }, [content]);
+
     if (!currentChapter) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center p-8">

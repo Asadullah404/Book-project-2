@@ -36,7 +36,16 @@ export default function RootLayout({ children }) {
                 tex: {
                   inlineMath: [['\\\\(', '\\\\)']],
                   displayMath: [['\\\\[', '\\\\]']],
-                  processEscapes: true
+                  processEscapes: true,
+                  processEnvironments: true
+                },
+                options: {
+                  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                },
+                startup: {
+                  pageReady: () => {
+                    return MathJax.startup.defaultPageReady();
+                  }
                 }
               };
             `,

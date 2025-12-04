@@ -1,3 +1,17 @@
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class="chapter-content space-y-6" id="10. Simulation Methods">
     <h2 id="chapter-10-simulation-methods-0"
         class="text-3xl font-bold mt-12 mb-6 text-gray-900 dark:text-white border-b pb-2">Chapter 10 Simulation Methods
@@ -396,7 +410,8 @@
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">where η i is the damping loss factor
         and E i the steady-state energy stored in modes of spectral density v i . When two subsystems are coupled,
         conservation of energy and balance leads to equilibrium when</p>
-    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \frac{E_i}{\nu_i} = \frac{E_k}{\nu_k} \tag{10.21} \]</p>
+    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \frac{E_i}{\nu_i} =
+        \frac{E_k}{\nu_k} \tag{10.21} \]</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">The effective energy transport is,
         thus, expressed by the ratio of absolute energy in the frequency band and the modal density. This is appropriate
         in a statistical sense since the probability of energy exchange in modal coupling depends on several factors
@@ -411,14 +426,20 @@
         \tag{10.22} \]</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">With this concept we can formulate the
         energy injected into a subsystem by accounting for a source and all power input from other systems.</p>
-    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \Pi_{i,\text{input}} = \omega \eta_i E_i + \sum_{k \neq i} \omega \nu_i \eta_{ik} \left( \frac{E_i}{\nu_i} - \frac{E_k}{\nu_k} \right) \tag{10.23} \]</p>
+    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \Pi_{i,\text{input}} = \omega
+        \eta_i E_i + \sum_{k \neq i} \omega \nu_i \eta_{ik} \left( \frac{E_i}{\nu_i} - \frac{E_k}{\nu_k} \right)
+        \tag{10.23} \]</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">The equation of modal energies of all
         subsystems, coupling and power flow can thus be expressed in matrix form, such as</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \mathbf{\Pi} = \mathbf{C}\mathbf{E}
         \tag{10.24} \]</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">which for three subsystems is expanded
         in the form</p>
-    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \mathbf{C} = \begin{pmatrix} \omega \nu_1 \eta_1 + \sum_{k \neq 1} \omega \nu_1 \eta_{1k} & -\omega \nu_1 \eta_{12} & -\omega \nu_1 \eta_{13} \\ -\omega \nu_2 \eta_{21} & \omega \nu_2 \eta_2 + \sum_{k \neq 2} \omega \nu_2 \eta_{2k} & -\omega \nu_2 \eta_{23} \\ -\omega \nu_3 \eta_{31} & -\omega \nu_3 \eta_{32} & \omega \nu_3 \eta_3 + \sum_{k \neq 3} \omega \nu_3 \eta_{3k} \end{pmatrix} \tag{10.25} \]</p>
+    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">\[ \mathbf{C} = \begin{pmatrix} \omega
+        \nu_1 \eta_1 + \sum_{k \neq 1} \omega \nu_1 \eta_{1k} & -\omega \nu_1 \eta_{12} & -\omega \nu_1 \eta_{13} \\
+        -\omega \nu_2 \eta_{21} & \omega \nu_2 \eta_2 + \sum_{k \neq 2} \omega \nu_2 \eta_{2k} & -\omega \nu_2 \eta_{23}
+        \\ -\omega \nu_3 \eta_{31} & -\omega \nu_3 \eta_{32} & \omega \nu_3 \eta_3 + \sum_{k \neq 3} \omega \nu_3
+        \eta_{3k} \end{pmatrix} \tag{10.25} \]</p>
     <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-4 text-justify">Typical applications in acoustic
         engineering involve hundreds or thousands of subsystems. With the energy density or the sound intensity known,
         the sound pressure can be estimated on the basis of a specific sound field type. In diffuse field conditions in
@@ -733,5 +754,5 @@
         to transfer path models with the difference that not transfer paths but signal content is separated (in the
         analysis) and recombined in the synthesis. This model can be applied in noise control as well as in the
         modelling of musical sounds.</p>
-<div id="quiz-10_simulation_methods" class="scroll-mt-20"></div>
+    <div id="quiz-10_simulation_methods" class="scroll-mt-20"></div>
 </div>

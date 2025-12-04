@@ -1,3 +1,17 @@
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class="chapter-content space-y-6" id="09. Convolution and Binaural Sound Synthesis">
     <h2 id="chapter-9-convolution-and-binaural-sound-synthesis-0"
         class="text-3xl font-bold mt-12 mb-6 text-gray-900 dark:text-white border-b pb-2">Chapter 9 Convolution and
@@ -243,5 +257,5 @@
         scale (low bit scaling). With the technique of binaural mixing and the opportunity to create any kind of
         spectral, temporal and spatial sound event, numerous applications which use sound as the carrier of information
         come into play. One tool in this respect is the so-called auditory display.</p>
-<div id="quiz-09_convolution_and_binaural_sound_synthesis" class="scroll-mt-20"></div>
+    <div id="quiz-09_convolution_and_binaural_sound_synthesis" class="scroll-mt-20"></div>
 </div>
