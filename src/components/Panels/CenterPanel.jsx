@@ -120,6 +120,11 @@ export default function CenterPanel() {
             // Function to trigger typesetting
             const typeset = () => {
                 if (window.MathJax && window.MathJax.typesetPromise) {
+                    // Reset tags to avoid "Label multiply defined" errors when reloading content
+                    if (window.MathJax.tex && window.MathJax.tex.resetTags) {
+                        window.MathJax.tex.resetTags();
+                    }
+
                     window.MathJax.typesetPromise()
                         .catch((err) => console.error('MathJax typeset error:', err));
                 } else {
