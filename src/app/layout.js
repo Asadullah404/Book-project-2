@@ -37,7 +37,8 @@ export default function RootLayout({ children }) {
                   inlineMath: [['\\\\(', '\\\\)']],
                   displayMath: [['\\\\[', '\\\\]']],
                   processEscapes: true,
-                  processEnvironments: true
+                  processEnvironments: true,
+                  tags: 'ams'
                 },
                 options: {
                   skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']

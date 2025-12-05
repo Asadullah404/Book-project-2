@@ -116,8 +116,21 @@ export default function CenterPanel() {
 
     // Trigger MathJax to process the content after it's loaded
     useEffect(() => {
-        if (content && typeof window !== 'undefined' && window.MathJax) {
-            window.MathJax.typesetPromise().catch((err) => console.error('MathJax typeset error:', err));
+        if (content && typeof window !== 'undefined') {
+            // Function to trigger typesetting
+            const typeset = () => {
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    window.MathJax.typesetPromise()
+                        .catch((err) => console.error('MathJax typeset error:', err));
+                } else {
+                    // If MathJax is not ready yet, retry after a short delay
+                    // This handles the case where the script is still loading
+                    setTimeout(typeset, 100);
+                }
+            };
+
+            // requestAnimationFrame ensures we run after the DOM update
+            requestAnimationFrame(typeset);
         }
     }, [content]);
 
