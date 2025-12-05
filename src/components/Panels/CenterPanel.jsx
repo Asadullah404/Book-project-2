@@ -114,9 +114,39 @@ export default function CenterPanel() {
         fetchChapterContent();
     }, [currentChapter]);
 
+    const contentRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Handle resize for mobile detection
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        // Initial check
+        checkMobile();
+
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const getMaxWidth = () => {
+        // On mobile, always use full width
+        if (isMobile) {
+            return 'max-w-full';
+        }
+        // Desktop: adjust based on sidebars
+        if (!isLeftPanelOpen && !isRightPanelOpen) return 'max-w-5xl';
+        if (isLeftPanelOpen && isRightPanelOpen) return 'max-w-3xl';
+        return 'max-w-4xl';
+    };
+
     // Trigger MathJax to process the content after it's loaded
     useEffect(() => {
-        if (content && typeof window !== 'undefined') {
+        if (content && !loading && contentRef.current && typeof window !== 'undefined') {
+            // Manually set innerHTML to avoid React reconciling MathJax changes
+            contentRef.current.innerHTML = content;
+
             // Function to trigger typesetting
             const typeset = () => {
                 if (window.MathJax && window.MathJax.typesetPromise) {
@@ -125,11 +155,13 @@ export default function CenterPanel() {
                         window.MathJax.tex.resetTags();
                     }
 
-                    window.MathJax.typesetPromise()
+                    window.MathJax.typesetPromise([contentRef.current])
+                        .then(() => {
+                            console.log('MathJax typesetting complete');
+                        })
                         .catch((err) => console.error('MathJax typeset error:', err));
                 } else {
                     // If MathJax is not ready yet, retry after a short delay
-                    // This handles the case where the script is still loading
                     setTimeout(typeset, 100);
                 }
             };
@@ -137,7 +169,7 @@ export default function CenterPanel() {
             // requestAnimationFrame ensures we run after the DOM update
             requestAnimationFrame(typeset);
         }
-    }, [content]);
+    }, [content, loading]);
 
     // 3D Scroll Effect
     const containerRef = useRef(null);
@@ -145,19 +177,6 @@ export default function CenterPanel() {
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
     const rotateX = useTransform(smoothVelocity, [-3000, 0, 3000], [15, 0, -15]);
-
-    // Dynamically adjust max-width based on sidebar state and screen size
-    // Mobile: full width, Desktop varies by sidebar state
-    const getMaxWidth = () => {
-        // On mobile, always use full width
-        if (typeof window !== 'undefined' && window.innerWidth < 768) {
-            return 'max-w-full';
-        }
-        // Desktop: adjust based on sidebars
-        if (!isLeftPanelOpen && !isRightPanelOpen) return 'max-w-5xl';
-        if (isLeftPanelOpen && isRightPanelOpen) return 'max-w-3xl';
-        return 'max-w-4xl';
-    };
 
     return (
         <div
@@ -226,7 +245,7 @@ export default function CenterPanel() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
                                 className="prose dark:prose-invert max-w-none"
-                                dangerouslySetInnerHTML={{ __html: content }}
+                                ref={contentRef}
                             />
                             {currentChapter && <TestArea chapterId={currentChapter.id} />}
                         </motion.div>
