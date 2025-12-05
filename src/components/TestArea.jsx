@@ -167,13 +167,13 @@ export default function TestArea({ chapterId }) {
                                                 } else if (userAnswers[q.id] === optIndex) {
                                                     optionClass += "bg-red-500 border-red-500 text-white";
                                                 } else {
-                                                    optionClass += "border-gray-200 dark:border-gray-700 opacity-50";
+                                                    optionClass += "border-gray-200 dark:border-gray-700 opacity-50 text-gray-500 dark:text-gray-400";
                                                 }
                                             } else {
                                                 if (userAnswers[q.id] === optIndex) {
                                                     optionClass += "bg-blue-600 border-blue-600 text-white shadow-md";
                                                 } else {
-                                                    optionClass += "border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20";
+                                                    optionClass += "border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20";
                                                 }
                                             }
 
