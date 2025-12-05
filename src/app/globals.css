@@ -1,102 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 @import "tailwindcss";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Core Palette - Light Mode (Crisp Paper) */
+    --background: #f8f9fa;
+    --foreground: #1a1a2e;
+    --primary: #00f2ea;
+    /* Neon Cyan */
+    --secondary: #ff0050;
+    /* Neon Magenta */
+    --accent: #7000ff;
+    /* Deep Purple */
+    --surface: rgba(255, 255, 255, 0.7);
+    --border: rgba(0, 0, 0, 0.1);
+
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Merriweather', serif;
+    --font-mono: 'JetBrains Mono', monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
+    --font-sans: var(--font-sans);
+    --font-serif: var(--font-serif);
+    --font-mono: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        /* Core Palette - Dark Mode (Deep Void) */
+        --background: #050505;
+        --foreground: #e0e0e0;
+        --primary: #00f2ea;
+        --secondary: #ff0050;
+        --accent: #bc13fe;
+        --surface: rgba(10, 10, 15, 0.6);
+        --border: rgba(255, 255, 255, 0.1);
+    }
 }
 
 :root.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+    --background: #050505;
+    --foreground: #e0e0e0;
+    --primary: #00f2ea;
+    --secondary: #ff0050;
+    --accent: #bc13fe;
+    --surface: rgba(10, 10, 15, 0.6);
+    --border: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: #171717;
-  /* Dark text for light mode */
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  overflow: hidden;
-  /* Prevent scroll on body, handle in panels */
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow: hidden;
+    /* Prevent scroll on body, handle in panels */
+
+    /* Mesh Gradient Background - Light Mode (Pastel/Airy) */
+    background-color: var(--background);
+    background-image:
+        radial-gradient(at 0% 0%, hsla(190, 80%, 90%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(320, 80%, 92%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(260, 80%, 90%, 1) 0, transparent 50%);
+    background-size: 200% 200%;
+    animation: meshGradient 20s ease infinite;
 }
 
 body.dark {
-  color: #ededed;
-  /* Light text for dark mode */
+    /* Mesh Gradient Background - Dark Mode (Deep Void) */
+    background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 39%, 20%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 20%, 1) 0, transparent 50%);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(45deg, #232526 0%, #414345 100%);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-  }
-}
+@keyframes meshGradient {
+    0% {
+        background-position: 0% 50%;
+    }
 
-:root.dark body {
-  background: linear-gradient(45deg, #232526 0%, #414345 100%);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
+    50% {
+        background-position: 100% 50%;
+    }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* 3D Utilities */
-.perspective-1200 {
-  perspective: 1200px;
+.perspective-1000 {
+    perspective: 1000px;
 }
 
 .preserve-3d {
-  transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .backface-hidden {
-  backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.5);
-  border-radius: 4px;
+    background: var(--accent);
+    border-radius: 3px;
+    opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.8);
+    background: var(--primary);
+}
+
+/* Typography Overrides for Content */
+.prose {
+    font-family: var(--font-serif);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+    font-family: var(--font-sans);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.prose code {
+    font-family: var(--font-mono);
+    color: var(--secondary);
+}
+
+.prose pre {
+    background: #1a1a1a !important;
+    color: #e0e0e0;
+    /* Fix for light mode readability */
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
 }

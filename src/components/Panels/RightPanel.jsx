@@ -40,7 +40,7 @@ export default function RightPanel() {
     return (
         <div className="h-full flex flex-col">
             <div className="p-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
-                <h2 className="font-bold text-lg flex items-center gap-2">
+                <h2 className="font-bold text-lg flex items-center gap-2 text-gray-900 dark:text-white">
                     <Terminal size={18} className="text-green-500" />
                     Sandbox
                 </h2>
@@ -68,7 +68,7 @@ export default function RightPanel() {
                     <textarea
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
-                        className="w-full h-full p-4 bg-transparent resize-none outline-none font-mono text-sm text-gray-800 dark:text-gray-200"
+                        className="w-full h-full p-4 bg-transparent resize-none outline-none font-mono text-sm text-gray-900 dark:text-gray-200"
                         spellCheck="false"
                     />
                     {isLoading && (

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import useStore from '@/store/useStore';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useVelocity, useTransform, useSpring } from 'framer-motion';
 import { getChapter } from '@/lib/firestoreService';
 import TestArea from '../TestArea';
 
@@ -121,19 +121,12 @@ export default function CenterPanel() {
         }
     }, [content]);
 
-    if (!currentChapter) {
-        return (
-            <div className="flex flex-col items-center justify-center h-full text-center p-8">
-                <div className="w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
-                    <span className="text-4xl">📚</span>
-                </div>
-                <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Welcome to Reader</h1>
-                <p className="text-gray-700 dark:text-gray-400 max-w-md">
-                    Select a chapter from the library on the left to start reading.
-                </p>
-            </div>
-        );
-    }
+    // 3D Scroll Effect
+    const containerRef = useRef(null);
+    const { scrollY } = useScroll({ container: containerRef });
+    const scrollVelocity = useVelocity(scrollY);
+    const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+    const rotateX = useTransform(smoothVelocity, [-3000, 0, 3000], [15, 0, -15]);
 
     // Dynamically adjust max-width based on sidebar state and screen size
     // Mobile: full width, Desktop varies by sidebar state
@@ -149,20 +142,78 @@ export default function CenterPanel() {
     };
 
     return (
-        <div className={`${getMaxWidth()} mx-auto pb-20`}>
-            {loading ? (
-                <SkeletonLoader />
-            ) : (
-                <>
+        <div
+            ref={containerRef}
+            className="h-full w-full overflow-y-auto custom-scrollbar perspective-1000 pb-20"
+        >
+            {!currentChapter ? (
+                <div className="flex items-center justify-center h-full p-8 perspective-1000">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="prose dark:prose-invert max-w-none"
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
-                    {currentChapter && <TestArea chapterId={currentChapter.id} />}
-                </>
+                        initial={{ rotateY: -15, rotateX: 5, scale: 0.9, opacity: 0 }}
+                        animate={{ rotateY: 0, rotateX: 0, scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative w-full max-w-md aspect-[3/4] bg-gradient-to-br from-white/80 via-gray-100/50 to-white/80 dark:from-zinc-900/80 dark:via-black/50 dark:to-zinc-900/80 backdrop-blur-xl rounded-r-2xl rounded-l-md border-r border-t border-b border-white/20 dark:border-white/10 shadow-2xl flex flex-col items-center justify-center text-center p-12 group hover:shadow-cyan-500/20 transition-shadow duration-500"
+                    >
+                        {/* Book Spine Effect */}
+                        <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-800 dark:to-gray-900 rounded-l-md shadow-inner" />
+                        <div className="absolute left-3 top-0 bottom-0 w-px bg-black/10 dark:bg-white/10" />
+
+                        {/* Content */}
+                        <div className="relative z-10 space-y-10">
+                            <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ delay: 0.3, type: "spring" }}
+                                className="w-32 h-32 mx-auto bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/30 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" />
+                                <span className="text-6xl relative z-10">🎧</span>
+                                <div className="absolute bottom-2 right-6 text-2xl">⚡</div>
+                            </motion.div>
+
+                            <div className="space-y-4">
+                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 dark:from-cyan-400 dark:via-purple-400 dark:to-pink-400 font-serif tracking-tight drop-shadow-sm">
+                                    Audio Code Book
+                                </h1>
+                                <div className="h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent" />
+                                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 font-mono">
+                                    Interactive Learning
+                                </p>
+                            </div>
+
+                            <div className="pt-8">
+                                <p className="text-gray-600 dark:text-gray-300 font-medium italic">
+                                    "Select a chapter from the library<br />to begin your journey."
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Decorative Elements */}
+                        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 rounded-r-2xl pointer-events-none" />
+                        <div className="absolute top-4 right-4 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl" />
+                        <div className="absolute bottom-4 left-8 w-32 h-32 bg-purple-500/10 rounded-full blur-xl" />
+                    </motion.div>
+                </div>
+            ) : (
+                <div className={`${getMaxWidth()} mx-auto`}>
+                    {loading ? (
+                        <SkeletonLoader />
+                    ) : (
+                        <motion.div
+                            style={{ rotateX, transformStyle: "preserve-3d" }}
+                            className="origin-top"
+                        >
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                                className="prose dark:prose-invert max-w-none"
+                                dangerouslySetInnerHTML={{ __html: content }}
+                            />
+                            {currentChapter && <TestArea chapterId={currentChapter.id} />}
+                        </motion.div>
+                    )}
+                </div>
             )}
         </div>
     );
