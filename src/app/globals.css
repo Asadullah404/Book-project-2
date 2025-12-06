@@ -168,21 +168,23 @@ body.dark {
 /* MathJax Responsive Fixes */
 mjx-container {
     max-width: 100% !important;
+    width: 100% !important;
+    display: block !important;
     overflow-x: auto !important;
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
+    margin: 1em 0 !important;
+    padding: 0.5rem 0 !important;
 }
 
 mjx-container[display="true"] {
     display: block !important;
-    padding: 0.5rem 0 !important;
-    margin: 1em 0 !important;
 }
 
 /* Ensure the container allows scrolling */
 .prose {
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow-x: visible !important;
 }
 
 /* Scrollbar styling */
