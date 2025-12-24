@@ -84,9 +84,20 @@ export default function RightPanel() {
                     {output.length === 0 ? (
                         <span className="text-gray-600 italic">Ready...</span>
                     ) : (
-                        output.map((line, i) => (
-                            <div key={i} className="whitespace-pre-wrap border-b border-gray-800/50 pb-1 mb-1 last:border-0">{line}</div>
-                        ))
+                        output.map((item, i) => {
+                            if (item.type === 'image') {
+                                return (
+                                    <div key={i} className="my-2 border-b border-gray-800/50 pb-2">
+                                        <img src={item.content} alt="Plot" className="max-w-full rounded bg-white" />
+                                    </div>
+                                );
+                            }
+                            return (
+                                <div key={i} className={`whitespace-pre-wrap border-b border-gray-800/50 pb-1 mb-1 last:border-0 ${item.type === 'error' ? 'text-red-400' : ''}`}>
+                                    {item.content}
+                                </div>
+                            );
+                        })
                     )}
                 </div>
             </div>

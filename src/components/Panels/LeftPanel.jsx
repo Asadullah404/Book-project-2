@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, Book, FileText, Hash } from 'lucide-react';
+import { ChevronRight, Book, FileText } from 'lucide-react';
 import useStore from '@/store/useStore';
 import { getBooks } from '@/lib/firestoreService';
 
@@ -26,7 +26,7 @@ const NavItem = ({ item, depth = 0 }) => {
         if (item.type === 'category') return <Book size={16} className="text-blue-500" />;
         if (item.type === 'chapter') return <FileText size={16} className="text-purple-500" />;
         if (item.type === 'quiz') return <FileText size={16} className="text-green-500" />; // Or a specific Quiz icon
-        return <Hash size={14} className="text-gray-400" />;
+        return <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />;
     };
 
     return (
